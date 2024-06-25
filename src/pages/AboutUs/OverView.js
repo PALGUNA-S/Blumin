@@ -10,7 +10,9 @@ const OverView = () => {
                     <Typography variant="h4" fontWeight={500} >BLUMIN — Overview</Typography>
                     <Typography pt={0.2} variant="h6" >Bridging the Gap Between Industry and Academia</Typography>
                 </Box>
-                <Stack sx={{ background: '#fff', borderRadius: '40px 0 0 0', transition: 'box-shadow 0.5s ease-in-out', '&:hover': { transition: 'box-shadow 0.5s ease-in-out', boxShadow: '5px 5px 10px 2px rgba(0, 0, 0, 0.1)' } }} p={2}>
+                <Stack sx={{ background: '#fff', borderRadius: '40px 0 0 0', transition: 'box-shadow 0.5s ease-in-out', '&:hover': { transition: 'box-shadow 0.5s ease-in-out', boxShadow: '5px 5px 10px 2px rgba(0, 0, 0, 0.1)' } }} p={2} data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
                             <CardContent

@@ -70,11 +70,15 @@ const Solutions = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} md={5} container justifyContent="center" alignItems="center" sx={{ display: { xs: 'none', md: 'flex' } }} >
+                    <Grid data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" item xs={12} md={5} container justifyContent="center" alignItems="center" sx={{ display: { xs: 'none', md: 'flex' } }} >
                         <img src={Industry} alt="Industry-img" style={{ maxWidth: '100%', height: 'auto', borderRadius: '0 30px 0 30px' }} />
                     </Grid>
 
-                    <Grid item xs={12} md={7}>
+                    <Grid item xs={12} md={7} data-aos="fade-left"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
                         {accordionContent.map((item, index) => (
                             <Accordion
                                 key={index}

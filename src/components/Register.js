@@ -1,7 +1,6 @@
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import banner from '../assets/home-banner.png';
 import '../pages/ContactUs/ContactUs.css';
 
 const Register = () => {
@@ -27,7 +26,7 @@ const Register = () => {
                         <Stack spacing={2} sx={{
                             textAlign: 'center', background: 'rgba(255, 255, 255, 0.6)',
                             backdropFilter: 'blur(4px)', py: 6, px: 4, borderRadius: '40px 0 0',
-                        }}>
+                        }} data-aos="zoom-in" data-aos-duration="2000">
                             <Box>
                                 <Typography variant="h4" fontWeight={600} gutterBottom>
                                     Join Our Community

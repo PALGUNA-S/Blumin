@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Stack, TextField, Typography } from '@mui/material';
 import React from 'react';
 import './ContactUs.css'
 import { Link } from 'react-router-dom';
@@ -7,33 +7,36 @@ const ContactUs = () => {
     return (
         <Box py={12} className='bgcolor' >
             <Container>
-                <Box mb={4}>
+                <Box color={'#043D62'} mb={4}>
                     <Typography variant="h4" fontWeight={500}>Contact Us</Typography>
                     <Typography pt={0.2} variant="h6">Feel free to let us know if you have any further questions or if there's anything else we can assist you with.</Typography>
                 </Box>
-                <Box sx={{
-                    background: 'rgba(255, 255, 255, 1)',
-                    backdropFilter: 'blur(10px)',
-                }} p={2}>
+                <Box p={2} sx={{ background: '#FFF', borderBottomLeftRadius: '40px' }}>
                     <Grid container spacing={4}>
                         <Grid item xs={12} md={6} container direction="column" justifyContent="center">
                             <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     <Typography variant="h6" fontWeight={500}>Address</Typography>
-                                    <Typography component={Link} sx={{ textDecoration: 'none', color: 'black' }}
-                                        to='https://maps.app.goo.gl/pAWkwetTWz9o55nY6'
+                                    <Typography
+                                        component={Link}
+                                        to='https://www.google.com/maps/dir/?api=1&destination=Blumin%2C+4th+floor%2C+jyothi+imperial+building%2C+old+mumbai+highway%2C+janardhana+hills%2C+telecom+nagar%2C+gachibowli%2C+500032%2C+hyderabad%2C+telangana'
                                         target="_blank"
-                                        rel="noopener noreferrer" variant="body1">Blumin, 4th floor, jyothi imperial building, old mumbai highway, janardhana hills, telecom nagar, gachibowli, 500032, hyderabad, telangana </Typography>
+                                        rel="noopener noreferrer"
+                                        sx={{ textDecoration: 'none', color: 'black' }}
+                                        variant="body1"
+                                    >
+                                        Blumin, 4th floor, jyothi imperial building, old mumbai highway, janardhana hills, telecom nagar, gachibowli, 500032, hyderabad, telangana
+                                    </Typography>
                                 </Grid>
                             </Grid>
                             <Grid container spacing={2} mt={2}>
                                 <Grid item xs={12} md={6}>
                                     <Typography variant="h6" fontWeight={500}>Email</Typography>
-                                    <Typography variant="body1">info@leremitt.com</Typography>
+                                    <Typography variant="body1">info@bluminiic.com</Typography>
                                 </Grid>
                                 <Grid item xs={12} md={6}>
                                     <Typography variant="h6" fontWeight={500}>Phone</Typography>
-                                    <Typography variant="body1">+91 9876543210</Typography>
+                                    <Typography variant="body1">+91 9390910373</Typography>
                                 </Grid>
                             </Grid>
                             <Box mt={2}>
@@ -93,11 +96,11 @@ const ContactUs = () => {
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <Box textAlign="center">
-                                            <Button variant="contained" color="primary" fullWidth>
+                                        <Stack direction={'row'} justifyContent={'flex-end'}>
+                                            <Button variant="contained" size="large" sx={{ background: '#206498', borderRadius: '0 20px', boxShadow: 'none', transition: 'background 0.3s ease-in-out', textTransform: 'capitalize', '&:hover': { background: '#D31480', transition: 'background 0.3s ease-in-out', boxShadow: 'none' }, width: '40%' }}>
                                                 Submit
                                             </Button>
-                                        </Box>
+                                        </Stack>
                                     </Grid>
                                 </Grid>
                             </form>

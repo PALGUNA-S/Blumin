@@ -63,7 +63,7 @@ const WhatWeOffer = () => {
                 <Grid container spacing={2}>
                     {services.map((service, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Card sx={{ height: '100%', boxShadow: 'none', borderRadius: '30px 0 0' }}>
+                            <Card sx={{ height: '100%', boxShadow: 'none', borderRadius: '30px 0 0' }} data-aos="fade-up" data-aos-duration="3000">
                                 <Box sx={{ backgroundImage: service.bgColor, height: '100%', }}  >
                                     <CardMedia>
                                         <Box component="img" src={service.image} sx={{ width: '100%' }} alt={`Service ${index + 1}`} />

@@ -26,9 +26,9 @@ const footerItems = [
     {
         title: 'Contact Us',
         links: [
-            { text: 'Email: info@bluminiic.com' },
-            { text: 'Phone: +1 (123) 456-7890' },
-            { text: 'Address: 1234 Innovation Drive, Tech City' },
+            { text: 'Email: info@bluminiic.com', to: 'mailto:info@bluminiic.com' },
+            { text: 'Phone: +91 9390910373' },
+            { text: 'Address: Blumin, 4th floor, jyothi imperial building, old mumbai highway, janardhana hills, telecom nagar, gachibowli, 500032, hyderabad, telangana', to: 'https://www.google.com/maps/dir/?api=1&destination=Blumin%2C+4th+floor%2C+jyothi+imperial+building%2C+old+mumbai+highway%2C+janardhana+hills%2C+telecom+nagar%2C+gachibowli%2C+500032%2C+hyderabad%2C+telangana' },
         ],
         socialLinks: [
             { icon: <Facebook />, to: 'https://facebook.com' },
@@ -58,7 +58,6 @@ const Footer = () => {
                     <Typography mt={0.5} variant='h6' fontWeight={900} lineHeight={'77px'} letterSpacing={'-0.77px'} fontSize={'77px'}>
                         IGNITING NEW POSSIBILITIES
                     </Typography>
-
                 </Box>
 
                 <Grid container spacing={2} mb={3}>
@@ -74,9 +73,13 @@ const Footer = () => {
                                     </Typography>
                                 ))}
                                 {item.links && item.links.map((link, idx) => (
-                                    <Link key={idx} color="inherit" component={RouterLink} to={link.to} sx={hoverEffectStyle}>
-                                        <Typography variant='body1' fontWeight={200}>{link.text}</Typography>
-                                    </Link>
+                                    link.to ? (
+                                        <Link key={idx} color="inherit" href={link.to} sx={hoverEffectStyle} target={link.to.startsWith('http') ? '_blank' : '_self'}>
+                                            <Typography variant='body1' fontWeight={200}>{link.text}</Typography>
+                                        </Link>
+                                    ) : (
+                                        <Typography key={idx} variant='body1' fontWeight={200}>{link.text}</Typography>
+                                    )
                                 ))}
                                 {item.socialLinks && (
                                     <Stack direction="row" spacing={1} mt={2}>
@@ -94,7 +97,6 @@ const Footer = () => {
                                         ))}
                                     </Stack>
                                 )}
-
                             </Stack>
                         </Grid>
                     ))}
@@ -112,7 +114,6 @@ const Footer = () => {
                             </Link>
                         ))}
                     </Stack>
-
 
                     <Typography variant="body1" color="inherit" >
                         © {new Date().getFullYear()} BLUMIN. All rights reserved.

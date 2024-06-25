@@ -23,7 +23,9 @@ const CoreValues = () => {
                     <Typography variant="h4" fontWeight={500}>Our Core Values</Typography>
                     <Typography pt={0.2} variant="h6">Guiding principles for success and impactful contributions to society.</Typography>
                 </Box>
-                <Card sx={{ borderRadius: '0 0 30px 0', transition: 'box-shadow 0.5s ease-in-out', boxShadow: '5px 5px 10px 2px rgba(0, 0, 0, 0.1)', '&:hover': { transition: 'box-shadow 0.5s ease-in-out', boxShadow: 'none' } }}>
+                <Card sx={{ borderRadius: '0 0 30px 0', transition: 'box-shadow 0.5s ease-in-out', boxShadow: '5px 5px 10px 2px rgba(0, 0, 0, 0.1)', '&:hover': { transition: 'box-shadow 0.5s ease-in-out', boxShadow: 'none' } }} data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
                     <Grid container spacing={2}>
                         <Grid item md={5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <img src={CoreValuesImage} alt="Core Values" style={{ width: '100%' }} />
