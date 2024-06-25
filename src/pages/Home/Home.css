@@ -1,0 +1,30 @@
+.custom-splide .splide__list {
+    transition: transform 0.8s ease-in-out !important; /* Adjust the duration and easing function for smooth transition */
+  }
+   .splide__arrow {
+    background: #074B65 !important;
+    /* border-radius: 0 !important; */
+    top: -30px !important;
+  }
+   .splide__arrow--prev {
+    left: 0px !important;
+  }
+   .splide__arrow--next {
+    left: 50px !important;
+  }
+   .splide__pagination {
+    bottom: -50px !important;
+  }
+   .splide__pagination__page {
+    background-color: #074B65 !important;
+    /* border-radius: 0 !important; */
+  }
+   .splide__arrow::before {
+    color: white !important;
+  }
+   .splide__arrow svg {
+    fill: white !important;
+  }
+  
+
+ 
