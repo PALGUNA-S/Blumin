@@ -2,6 +2,7 @@ import { Box, Button, Card, CardActions, CardContent, Container, Stack, Typograp
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const teamData = [
@@ -26,6 +27,13 @@ const teamData = [
 ];
 
 const WhoWeAre = () => {
+
+    const navigate = useNavigate();
+
+    const handleRegisterClick = () => {
+        navigate('/RegisterHome');
+    };
+
     return (
         <>
             <Box sx={{ py: 5 }} >
@@ -95,7 +103,7 @@ const WhoWeAre = () => {
                                                     variant="contained"
                                                     sx={{
                                                         "&:hover": {
-                                                            backgroundColor: "#2A6989",
+                                                            backgroundColor: "#074B65",
                                                             boxShadow: "none",
                                                         },
                                                         boxShadow: "none",
@@ -107,7 +115,7 @@ const WhoWeAre = () => {
                                                         justifyContent: "space-between",
                                                         textTransform: "none",
                                                         fontWeight: '500'
-                                                    }}
+                                                    }} onClick={handleRegisterClick}
                                                 >Know More</Button>
                                             </CardActions>
                                         </CardContent>

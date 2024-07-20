@@ -3,6 +3,7 @@ import { Box, Button, Stack, Typography } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import banner from '../../assets/home-banner.png';
 import pageLogo from '../../assets/page-logo.png';
@@ -75,6 +76,12 @@ const Banner = () => {
         });
     }, []);
 
+    const navigate = useNavigate();
+
+    const handleRegisterClick = () => {
+        navigate('/RegisterHome');
+    };
+
     return (
         <>
             <BackgroundContainer>
@@ -112,6 +119,7 @@ const Banner = () => {
                                 textTransform: "none",
                                 fontWeight: '900'
                             }}
+                            onClick={handleRegisterClick}
                         >
                             Register Now
                         </Button>

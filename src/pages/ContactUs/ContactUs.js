@@ -1,9 +1,34 @@
-import { Box, Button, Container, Grid, Stack, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Stack, Typography, styled, TextField } from '@mui/material';
 import React from 'react';
 import './ContactUs.css'
 import { Link } from 'react-router-dom';
 
+
 const ContactUs = () => {
+    const CustomTextField = styled(TextField)({
+        '& .MuiOutlinedInput-root': {
+            borderRadius: '0 20px',
+            '& fieldset': {
+                borderColor: '#074B65', // Default border color
+            },
+            '&:hover fieldset': {
+                borderColor: '#074B65', // Hover border color
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: '#D31480', // Active border color
+            },
+            '& input': {
+                color: '#074B65', // Text color
+            },
+        },
+        '& .MuiInputLabel-root': {
+            color: 'gray', // Label text color
+        },
+        '& .MuiInputLabel-root.Mui-focused': {
+            color: '#074B65', // Label text color when focused
+        },
+    });
+
     return (
         <Box py={12} className='bgcolor' >
             <Container>
@@ -25,7 +50,7 @@ const ContactUs = () => {
                                         sx={{ textDecoration: 'none', color: 'black' }}
                                         variant="body1"
                                     >
-                                        Blumin, 4th floor, jyothi imperial building, old mumbai highway, janardhana hills, telecom nagar, gachibowli, 500032, hyderabad, telangana
+                                        Blumin, 4th floor, Jyothi Imperial Building, Old Mumbai Highway, Janardhana Hills, Telecom Nagar, Gachibowli, 500032, Hyderabad, Telangana
                                     </Typography>
                                 </Grid>
                             </Grid>
@@ -52,42 +77,42 @@ const ContactUs = () => {
                             <form>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6}>
-                                        <TextField
+                                        <CustomTextField
                                             fullWidth
                                             label="First Name"
                                             variant="outlined"
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <TextField
+                                        <CustomTextField
                                             fullWidth
                                             label="Last Name"
                                             variant="outlined"
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <TextField
+                                        <CustomTextField
                                             fullWidth
                                             label="Email"
                                             variant="outlined"
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
-                                        <TextField
+                                        <CustomTextField
                                             fullWidth
                                             label="Phone Number"
                                             variant="outlined"
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <TextField
+                                        <CustomTextField
                                             fullWidth
                                             label="Organization"
                                             variant="outlined"
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <TextField
+                                        <CustomTextField
                                             fullWidth
                                             label="Message"
                                             variant="outlined"
@@ -97,7 +122,7 @@ const ContactUs = () => {
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Stack direction={'row'} justifyContent={'flex-end'}>
-                                            <Button variant="contained" size="large" sx={{ background: '#206498', borderRadius: '0 20px', boxShadow: 'none', transition: 'background 0.3s ease-in-out', textTransform: 'capitalize', '&:hover': { background: '#D31480', transition: 'background 0.3s ease-in-out', boxShadow: 'none' }, width: '40%' }}>
+                                            <Button variant="contained" size="large" sx={{ background: '#074B65', borderRadius: '0 20px', boxShadow: 'none', transition: 'background 0.3s ease-in-out', textTransform: 'capitalize', '&:hover': { background: '#D31480', transition: 'background 0.3s ease-in-out', boxShadow: 'none' }, width: '40%' }}>
                                                 Submit
                                             </Button>
                                         </Stack>

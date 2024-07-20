@@ -23,7 +23,7 @@ const OverView = () => {
                                     height: '100%'
                                 }}
                             >
-                                <Typography variant='h5' mb={1} color={'#074B65'} fontWeight={500}>Innovative Collaborations</Typography>
+                                <Typography variant='h5' mb={1} color={'#D31480'} fontWeight={500}>Innovative Collaborations</Typography>
                                 <Typography variant="body1" textAlign={'justify'}>
                                     BLUMIN is a pioneering initiative focused on bridging the gap between industry and academia. By connecting forward-thinking companies with top-tier universities and colleges, BLUMIN facilitates meaningful collaborations to address the evolving needs of the technology ecosystem. With years of experience in fostering successful partnerships, BLUMIN offers unparalleled expertise, making it a standout choice for those seeking innovation and impactful collaborations.
                                 </Typography>

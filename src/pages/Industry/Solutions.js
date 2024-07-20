@@ -58,7 +58,7 @@ const Solutions = () => {
         setExpandedIndex(index === expandedIndex ? -1 : index);
     };
     return (
-        <Box py={5} >
+        <Box py={5} sx={{ overflowX: 'hidden' }}>
             <Container>
                 <Grid container spacing={2}>
                     <Grid item xs={12}>

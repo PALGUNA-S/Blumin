@@ -17,7 +17,7 @@ const coreValuesList = [
 
 const CoreValues = () => {
     return (
-        <Box py={5} sx={{ background: 'linear-gradient(270deg, #DCE6F1 3.99%, rgba(231, 231, 231, 0.52) 73.83%);' }}>
+        <Box py={5} sx={{ background: 'linear-gradient(270deg, #DCE6F1 3.99%, rgba(231, 231, 231, 0.52) 73.83%);', overflowX: 'hidden' }}>
             <Container>
                 <Box color={'#074B65'} mb={4}>
                     <Typography variant="h4" fontWeight={500}>Our Core Values</Typography>
