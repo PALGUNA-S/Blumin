@@ -6,6 +6,7 @@ const Student = () => {
     const CustomTextField = styled(TextField)({
         '& .MuiOutlinedInput-root': {
             borderRadius: '0 20px',
+            background: '#FFF',
             '& fieldset': {
                 borderColor: '#074B65', // Default border color
             },

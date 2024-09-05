@@ -66,7 +66,7 @@ const WhatWeOffer = () => {
                             <Card sx={{ height: '100%', boxShadow: 'none', borderRadius: '30px 0 0' }} data-aos="fade-up" data-aos-duration="3000">
                                 <Box sx={{ backgroundImage: service.bgColor, height: '100%', }}  >
                                     <CardMedia>
-                                        <Box component="img" src={service.image} sx={{ width: '100%' }} alt={`Service ${index + 1}`} />
+                                        <Box component="img" src={service.image} sx={{ width: '100%', height: 250, objectFit: 'cover' }} alt={`Service ${index + 1}`} />
                                     </CardMedia>
                                     <CardContent>
                                         <Typography variant="h6" fontWeight={500} color={'#074B65'}>{service.title}</Typography>

@@ -160,8 +160,8 @@ const footerItems = [
         socialLinks: [
             { icon: <Facebook />, to: 'https://facebook.com' },
             { icon: <Twitter />, to: 'https://twitter.com' },
-            { icon: <LinkedIn />, to: 'https://linkedin.com' },
-            { icon: <Instagram />, to: 'https://instagram.com' },
+            { icon: <LinkedIn />, to: 'https://www.linkedin.com/feed/' },
+            { icon: <Instagram />, to: 'https://www.instagram.com/blumin_llp/' },
         ],
     },
 ];
@@ -241,7 +241,9 @@ const Footer = () => {
                 <Stack direction={'row'} justifyContent={'space-between'} mt={3}>
                     <Stack direction={'row'} spacing={1}>
                         {['Privacy Policy', 'Terms & Conditions'].map((text, index) => (
-                            <RouterLink key={index} to={`/${text.toLowerCase().replace(' ', '-')}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <RouterLink key={index}
+                                // to={`/${text.toLowerCase().replace(' ', '-')}`}
+                                style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <Typography variant="body1" color="inherit" fontWeight={200} sx={{ textDecoration: 'underline' }}>
                                     {text}
                                 </Typography>

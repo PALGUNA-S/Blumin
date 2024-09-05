@@ -58,6 +58,7 @@ const GlitchTypography = styled(Typography)(({ theme }) => ({
 
 const BackgroundContainer = styled(Box)({
     height: '100vh',
+    backgroundColor: '#081423',
     backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${banner})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
